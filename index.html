@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Die Fünf Großen Brennöfen der Song‑Dynastie</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Times New Roman",serif;background:linear-gradient(135deg,#2c1810 0%,#8b4513 50%,#d2b48c 100%);min-height:100vh;color:#333}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+    header{text-align:center;padding:40px 0;background:rgba(255,255,255,.95);margin-bottom:30px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    h1{font-size:2.8em;color:#8b4513;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.1)}
+    .subtitle{font-size:1.2em;color:#666;margin-bottom:20px}
+    .birthday-wish{background:linear-gradient(45deg,#ff6b6b,#ffd93d);color:#fff;padding:20px;margin:20px 0;border-radius:15px;text-align:center;font-size:1.5em;font-weight:700;text-shadow:2px 2px 4px rgba(0,0,0,.3);animation:sparkle 2s infinite}
+    @keyframes sparkle{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+    .qr-section{margin:20px 0;padding:20px;background:rgba(255,255,255,.9);border-radius:10px;text-align:center}
+    .qr-code{width:150px;height:150px;margin:10px auto;background:#fff;border:2px solid #8b4513;display:flex;align-items:center;justify-content:center;font-size:12px;color:#666}
+    .intro-section{background:rgba(255,255,255,.95);padding:30px;margin:20px 0;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .intro-section h2{color:#8b4513;font-size:2em;margin-bottom:20px;text-align:center;border-bottom:2px solid #d2b48c;padding-bottom:10px}
+    .intro-text{font-size:1.1em;line-height:1.8;color:#444;text-align:justify}
+    .five-kilns-overview{display:flex;justify-content:center;align-items:center;margin:30px 0;background:rgba(255,255,255,.95);padding:20px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .overview-image{width:100%;max-width:800px;height:200px;background:linear-gradient(45deg,#f0f0f0,#e0e0e0);border:2px solid #d2b48c;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#666;font-style:italic;position:relative}
+    .kilns-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+    .kiln-card{background:rgba(255,255,255,.95);border-radius:15px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,.2);transition:transform .3s ease,box-shadow .3s ease}
+    .kiln-card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+    .kiln-name{font-size:2em;color:#8b4513;margin-bottom:15px;text-align:center;border-bottom:2px solid #d2b48c;padding-bottom:10px}
+    figure.media{margin:10px 0 15px}
+    figure.media img{display:block;width:100%;height:260px;object-fit:cover;border:2px solid #d2b48c;border-radius:10px}
+    figure.media figcaption{font-size:.9em;color:#666;margin-top:6px}
+    .kiln-description{line-height:1.8;color:#444;text-align:justify;margin-bottom:15px}
+    .characteristics{margin-top:15px;padding:15px;background:rgba(210,180,140,.2);border-radius:8px}
+    .characteristics h4{color:#8b4513;margin-bottom:10px}
+    .characteristics ul{list-style:none}
+    .characteristics li{margin:5px 0;padding-left:20px;position:relative}
+    .characteristics li:before{content:"◆";color:#8b4513;position:absolute;left:0}
+    footer{text-align:center;padding:40px 0;background:rgba(255,255,255,.9);margin-top:30px;border-radius:15px;color:#666}
+    @media (max-width:768px){.container{padding:10px}h1{font-size:2em}.kilns-grid{grid-template-columns:1fr}.birthday-wish{font-size:1.2em;padding:15px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Die Fünf Großen Brennöfen der Song‑Dynastie</h1>
+      <p class="subtitle">Die strahlenden Perlen der chinesischen Keramikkunst</p>
+
+      <div class="birthday-wish">🎉 Alles Gute zum Geburtstag, Wolfgang! 🎂<br><span style="font-size:.8em">Möge dieses neue Lebensjahr voller Freude und Entdeckungen sein!</span></div>
+
+      <div class="qr-section">
+        <p>QR‑Code scannen, um diese Seite zu öffnen</p>
+        <div class="qr-code" id="qrcode">QR‑Code wird hier angezeigt</div>
+        <p><small>QR‑Code wird automatisch basierend auf der aktuellen Seiten‑URL generiert</small></p>
+      </div>
+    </header>
+
+    <div class="intro-section">
+      <h2>Designinspiration</h2>
+      <p class="intro-text">Die Song‑Dynastie (960–1279) war eine Blütezeit der chinesischen Keramikkunst. Unter den berühmten Brennöfen gelten die fünf großen Systeme – <strong>Ru (汝)</strong>, <strong>Guan (官)</strong>, <strong>Ge (哥)</strong>, <strong>Ding (定)</strong> und <strong>Jun (钧)</strong> – als legendär. Diese Seite zeigt eine kompakte Übersicht mit Bildbeispielen (frei bzw. offen lizenziert) und kurzen Beschreibungen.</p>
+    </div>
+<!-- 本地图片放在 assets/ 文件夹下，文件名请使用：ru.jpg, guan.jpg, ge.jpg, ding.jpg, jun.jpg -->
+<div class="kilns-grid">
+      <!-- Ru‑Brennofen -->
+      <div class="kiln-card">
+        <h2 class="kiln-name">Ru‑Brennofen (汝窑)</h2>
+        <figure class="media">
+          <img src="assets/ru.jpg" alt="Ru‑Ware, himmelblaue Glasur mit feinen Craquelé‑Rissen" loading="lazy" />
+
+        </figure>
+        <div class="kiln-description">Ru‑Ware des späten Nördlichen Song‑Hofs: berühmt für <em>himmelblaue</em> Glasur („Regenhimmelblau“), feines Netz an Craquelé sowie kleine Stützpunkte (芝麻钉) von der Stützbrandtechnik. Seltene Hofkeramik mit kurzer Produktionszeit.</div>
+        <div class="characteristics">
+          <h4>Hauptmerkmale:</h4>
+          <ul>
+            <li>Sanfte himmelblaue/entenblaue Glasur</li>
+            <li>Feines Craquelé (dichte Rissnetze)</li>
+            <li>Grauweißer, feiner Scherben</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Guan‑Brennofen -->
+      <div class="kiln-card">
+        <h2 class="kiln-name">Guan‑Brennofen (官窑)</h2>
+        <figure class="media">
+          <img src="assets/guan.jpg" alt="Guan‑Ware, dicker bläulich‑grüner Glasurauftrag mit markantem Craquelé" loading="lazy" />
+
+        </figure>
+        <div class="kiln-description">Südliche Song‑Zeit, Hofnahe Brennöfen im Raum Lin’an (Hangzhou). Charakteristisch sind <em>dicke Glasurschichten</em> und Craquelé‑Muster in grob‑ und feingliedrigen Linien („Goldene Linien, eiserne Drähte“).</div>
+        <div class="characteristics">
+          <h4>Hauptmerkmale:</h4>
+          <ul>
+            <li>Bläulich‑grüne bis graugrüne Glasur</li>
+            <li>Kontrastreiches Craquelé („金丝铁线“)</li>
+            <li>Würdevolle Formen, dicker Scherben</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ge‑Brennofen -->
+      <div class="kiln-card">
+        <h2 class="kiln-name">Ge‑Brennofen (哥窑)</h2>
+        <figure class="media">
+          <img src="assets/ge.jpg" alt="Ge‑Ware, Vase mit dichtem Eisblumen‑Craquelé" loading="lazy" />
+
+        </figure>
+        <div class="kiln-description">Berühmt für vollflächiges, netzartiges Craquelé („Eisrisse“) mit zwei Tonwerten. Glasurfarben reichen von grau‑blau bis elfenbein.</div>
+        <div class="characteristics">
+          <h4>Hauptmerkmale:</h4>
+          <ul>
+            <li>Doppeltes Craquelé (hell/dunkel)</li>
+            <li>Ruhige, schlichte Formen</li>
+            <li>Grauer bis dunkelgrauer Scherben</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ding‑Brennofen -->
+      <div class="kiln-card">
+        <h2 class="kiln-name">Ding‑Brennofen (定窑)</h2>
+        <figure class="media">
+          <img src="assets/ding.jpg" alt="Ding‑Ware, weiße Schale mit Ritz‑/Prägedekor" loading="lazy" />
+
+        </figure>
+        <div class="kiln-description">Weiße Glasur, häufig mit feinen Ritz‑ und Prägemotiven (Lotus, Päonie u. a.). Elegante, leichte Gefäßformen – „Schönheit der Schlichtheit“.</div>
+        <div class="characteristics">
+          <h4>Hauptmerkmale:</h4>
+          <ul>
+            <li>Elfenbeinweiße Glasur</li>
+            <li>Ritz‑/Prägedekor</li>
+            <li>Feiner, heller Scherben</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Jun‑Brennofen -->
+      <div class="kiln-card">
+        <h2 class="kiln-name">Jun‑Brennofen (钧窑)</h2>
+        <figure class="media">
+          <img src="assets/jun.jpg" alt="Jun‑Ware, himmelblaue Glasur mit purpurnen Wolken (Ofenverwandlung)" loading="lazy" />
+
+        </figure>
+        <div class="kiln-description">Berühmt für spektakuläre <em>Ofenverwandlungsfarben</em>: himmelblau, mondweiß und purpurrote Wolken verlaufen malerisch. Häufig Becken, Schalen und Blumentopf‑Formen.</div>
+        <div class="characteristics">
+          <h4>Hauptmerkmale:</h4>
+          <ul>
+            <li>Starke, changierende Glasurfarben</li>
+            <li>Dicker Glasurauftrag, teils mit „Regenwurm‑Linien“</li>
+            <li>Kräftiger, dichter Scherben</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Die fünf großen Brennöfen der Song‑Dynastie repräsentieren einen Höhepunkt der chinesischen Keramikkunst.</p>
+      <p>Diese Beispiele stammen aus offen lizenzierten Sammlungen. Bitte die jeweiligen Lizenzhinweise der Bildquellen beachten.</p>
+      <p style="margin-top:20px;font-size:.9em;color:#888">Erstellt: 2025 · Zur Bewahrung der Keramikkultur · Alles Gute zum Geburtstag, Wolfgang! 🎈</p>
+    </footer>
+  </div>
+
+  <!-- QR‑Code Generator -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script>
+    function generateQRCode(){
+      try{const qr=qrcode(0,'M');qr.addData(window.location.href);qr.make();const el=document.getElementById('qrcode');el.innerHTML=qr.createImgTag(3,8);const img=el.querySelector('img');if(img){img.style.width='100%';img.style.height='100%';img.style.objectFit='contain';}}
+      catch(e){document.getElementById('qrcode').innerHTML='QR‑Code Generierung fehlgeschlagen<br>Bitte Seite neu laden';}}
+    window.addEventListener('load',generateQRCode);
+    document.querySelectorAll('.kiln-card').forEach(card=>{card.addEventListener('click',function(){this.style.transform='translateY(-5px) scale(1.02)';setTimeout(()=>{this.style.transform='';},200);});});
+    document.documentElement.style.scrollBehavior='smooth';
+  </script>
+</body>
+</html>
